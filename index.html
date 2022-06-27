@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+   <title>Audio time</title>
+<style>
+body{
+padding:0;
+margin:0;
+background:Beige;
+}
+#container{
+text-align:center;
+
+margin-top:30%;
+
+}
+#time{
+color:gray;
+font-size:95px;
+text-align:center;
+font-family:courier;
+text-shadow:0px 2px 3px black; 
+}
+#btn{
+width:60%;
+padding:15px 25px; 
+background:transparent;
+border:1px solid black; 
+outline:none;
+border-radius:5px;
+background-image:linear-gradient(to bottom right,beige,coral);
+box-shadow:0px 1px 5px gray; 
+}
+</style>
+</head>
+<body>
+<div id="container">
+<h1 id="time"><span id="hour"></span><span>:</span><span id="minutes"></span></h1>
+<button id="btn">Audio time</button>
+</div>
+<script>
+
+var hour,time,minute;
+var speak=new Audio();
+var speakm=new Audio();
+function showTime(){
+time=new Date();
+hour=time.getHours();
+minutes=time.getMinutes();
+
+switch(hour){
+case 13:
+hour=1;
+break; 
+case 14:
+hour=2;
+break; 
+case 15:
+hour=3;
+break; 
+case 16:
+hour=4;
+break; 
+case 17:
+hour=5;
+break; 
+case 18:
+hour=6;
+break; 
+case 19:
+hour=7;
+break; 
+case 20:
+hour=8;
+break; 
+case 21:
+hour=9;
+break; 
+case 22:
+hour=10;
+break; 
+case 23:
+hour=11;
+break; 
+case 0:
+hour=12;
+break; 
+}
+switch(minutes){
+case 1:
+minutes=01;
+break; 
+case 2:
+minutes=02;
+break; 
+case 3:
+minutes=03;
+break; 
+case 4:
+minutes=04;
+break; 
+case 5:
+minutes=05;
+break; 
+case 6:
+minutes=06;
+break; 
+case 7:
+minutes=07;
+break; 
+case 8:
+minutes=08;
+break; 
+case 9:
+minutes=09;
+break; 
+case 0:
+minutes=00;
+break; 
+}
+document.getElementById("hour").innerHTML=hour;
+document.getElementById("minutes").innerHTML=minutes;
+
+}
+setInterval(showTime,500);
+function sayTime(){
+switch(hour){
+case 1:
+speak.src="1.3gpp";
+break; 
+case 2:
+speak.src="2.3gpp";
+break; 
+case 3:
+speak.src="3.3gpp";
+break; 
+case 4:
+speak.src="4.3gpp";
+break; 
+case 5:
+speak.src="5.3gpp";
+break; 
+case 6:
+speak.src="6.3gpp";
+break; 
+case 6:
+speak.src="6.3gpp";
+break; 
+case 7:
+speak.src="7.3gpp";
+break; 
+case 8:
+speak.src="8.3gpp";
+break; 
+case 9:
+speak.src="9.3gpp";
+break; 
+case 10:
+speak.src="10.3gpp";
+break; 
+case 11:
+speak.src="11.3gpp";
+break; 
+case 12:
+speak.src="12.3gpp";
+break; 
+}
+function sayM(){
+switch(minutes){
+case 00:
+speakm.src="00.3gpp";
+break; 
+case 01:
+speakm.src="01.3gpp";
+break; 
+case 02:
+speakm.src="02.3gpp";
+break; 
+case 03:
+speakm.src="03.3gpp";
+break; 
+case 04:
+speakm.src="04.3gpp";
+break; 
+case 05:
+speakm.src="05.3gpp";
+break; 
+case 05:
+speakm.src="05.3gpp";
+break; 
+case 06:
+speakm.src="06.3gpp";
+break; 
+case 07:
+speakm.src="07.3gpp";
+break; 
+case 08:
+speakm.src="8.3gpp";
+break; 
+case 09:
+speakm.src="09.3gpp";
+break; 
+case 10:
+speakm.src="10.3gpp";
+break; 
+case 11:
+speakm.src="11.3gpp";
+break; 
+case 12:
+speakm.src="12.3gpp";
+break; 
+case 13:
+speakm.src="13.3gpp";
+break; 
+case 14:
+speakm.src="14.3gpp";
+break; 
+case 15:
+speakm.src="15.3gpp";
+break; 
+case 16:
+speakm.src="16.3gpp";
+break; 
+case 17:
+speakm.src="17.3gpp";
+break; 
+case 18:
+speakm.src="18.3gpp";
+break; 
+case 18:
+speakm.src="18.3gpp";
+break; 
+case 19:
+speakm.src="19.3gpp";
+break; 
+case 20:
+speakm.src="20.3gpp";
+break; 
+case 21:
+speakm.src="21.3gpp";
+break; 
+case 22:
+speakm.src="22.3gpp";
+break; 
+case 23:
+speakm.src="23.3gpp";
+break; 
+case 24:
+speakm.src="24.3gpp";
+break; 
+case 25:
+speakm.src="25.3gpp";
+break; 
+case 26:
+speakm.src="26.3gpp";
+break; 
+case 27:
+speakm.src="27.3gpp";
+break; 
+case 28:
+speakm.src="28.3gpp";
+break; 
+case 29:
+speakm.src="29.3gpp";
+break; 
+case 30:
+speakm.src="30.3gpp";
+break; 
+case 31:
+speakm.src="31.3gpp";
+break; 
+case 32:
+speakm.src="32.3gpp";
+break; 
+case 33:
+speakm.src="33.3gpp";
+break; 
+case 34:
+speakm.src="34.3gpp";
+break; 
+case 35:
+speakm.src="35.3gpp";
+break; 
+case 36:
+speakm.src="36.3gpp";
+break; 
+case 37:
+speakm.src="37.3gpp";
+break; 
+case 38:
+speakm.src="38.3gpp";
+break; 
+case 39:
+speakm.src="39.3gpp";
+break; 
+case 40:
+speakm.src="40.3gpp";
+break; 
+case 41:
+speakm.src="41.3gpp";
+break; 
+case 42:
+speakm.src="42.3gpp";
+break; 
+case 43:
+speakm.src="43.3gpp";
+break; 
+case 44:
+speakm.src="44.3gpp";
+break; 
+case 45:
+speakm.src="45.3gpp";
+break; 
+case 46:
+speakm.src="46.3gpp";
+break; 
+case 47:
+speakm.src="47.3gpp";
+break; 
+case 48:
+speakm.src="48.3gpp";
+break; 
+case 49:
+speakm.src="49.3gpp";
+break; 
+case 50:
+speakm.src="50.3gpp";
+break; 
+case 51:
+speakm.src="51.3gpp";
+break; 
+case 52:
+speakm.src="52.3gpp";
+break; 
+case 53:
+speakm.src="53.3gpp";
+break; 
+case 54:
+speakm.src="54.3gpp";
+break; 
+case 55:
+speakm.src="55.3gpp";
+break; 
+case 56:
+speakm.src="56.3gpp";
+break; 
+case 57:
+speakm.src="57.3gpp";
+break; 
+case 58:
+speakm.src="58.3gpp";
+break; 
+case 59:
+speakm.src="59.3gpp";
+break; 
+
+}
+speakm.play();
+}
+speak.play();
+setTimeout(sayM,1200);
+}
+document.getElementById("btn").onclick=sayTime;
+</script>
+</body>
+</html>
